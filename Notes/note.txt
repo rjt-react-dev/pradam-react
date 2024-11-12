@@ -1,0 +1,50 @@
+# NPM : Its a standard package not node one but manager which manages packages for Javascript
+# package.json : Its a configuration file for npm which manages packages info's or dependency like version etc.
+# Bundler : It  allow to package code into a single file or bundle(like webpack and parcel for react) so that 
+whole code(html, css and javascript) can be minified,cached,compressed and clean before it will ship to production.
+# Dependency : There are two type of dependency one is dev dependency require at time of development 
+and other is production which are normal one
+# ^ and ~ : Difference is ^ update minor and ~ update major package version. Must use ^ to avoid breakage of app.
+# package.lock : Keeps a record of exact version and hash(integrity)  of that which is installed and used in project as dependency but 
+package.json stays with approx version with ^ sign which say it might get update with minor version in later point of time.
+# Transitive Dependency : Like our project needs parcel bundler as dependency which in turn need other dependency 
+and other one needs other and so on node_modules get so much big.
+# Parcel or webpack : These bundler not only responsible for bundle a single file of html,css and javascript code
+ but also running server and creating source file index.html along with dist folder. These can also be useful for building app and hoisted on some port to make it run
+# npx : To execute the package where npm install the package
+# CDN : To get react from Continuous Delivery Network is a costlier operation when same can access from node_modules when react is install using npm
+# React App is Fast : Because of Parcel package
+# npx parcel index.html : It generate build in dist folder and host on some port to run our app = Dev build\
+# npx parcel build index.html : Command for production build
+# npm run start = npm start
+# npm run build != npm build -> It is always npm run build to build our project
+# React Element = React.createElement("Parent Element or tag", {attribute or props of tag or element}, [array of child element] or text) = nothing but gives us object
+# React Dom = ReactDom.createRoot(document.getElementById("root"))
+# ReactDom.render(any element) => This will render object and pass it to browser in form of html.
+# Ultimately React.createElement => object => HTML (browser for presentation)
+# JSX : !:It is not part of react but it help developer to write react element. Hence JSX is nothing but javascript XML. 
+2: Also JSX Ultimately get convert to React Element first and get transpile (using Babel package which parcel used as dependency) to browser understandable language(Which is javascript object notation)
+3: JSX is an XML-like syntax extension to JavaScript that allows users to write HTML-like markup in a JavaScript file
+# Babel : Its is a package (Javascript Compiler) which takes all your jsx code and convert into React.createElement()
+# Camlecase : Use Camlecase for attribute in JSX <h1 className = ""></h1>
+# Functional Component : Its a normal javascript function which return some JSX is know as Functional Component.
+# Component Composition : Component  inside anothe Component is  Component Composition
+# We can pass Component inside React Element (i.e const Element = <h1><Component /></h1>)
+# JSX take care of injection like Cross-site scripting attack.
+#{Title()} oR <Title /> : Both are same thing one is called as Component Style Call or Javascript function call .Hence understandable to Babel compiler
+# Props: Are arguments to component
+# Config Driven UI : All the UI is given by Config file (1.e data). That mean UI is getting changed which has written once but due config driven Data appear different in different location 
+# Props As key not mentioned in component key error : In a tree of component at same level and suppose if new component came in first or last place then 
+react doesn't know or identify where to keep the component so it re-render whole  component to solve this and its end up with optimization issue and performance hit . TO rsolve this
+we attach key in each react element to uniquely identify the element to avoid re-rendering of component 
+# Two type of Exports : Default and Named Exports  => if single component is exported the use default otherwise named one.
+# Named Import : Uses {Name of Components } from path of file
+# What react solves: React solves the problem of DOM manipulation it uses virtual DOM to manipulate only that part of UI which is required to update
+instead on re-loading the whole DOM for a smaller dom element which is costlier event. Hence solves this using Virtual Dom 
+It also solves problem of keep UI and Data Layer in sink using State concept in a Component.
+# State In a Component : Its supper power way of defining variable in React Component which helps in keeping UI in sink with Data layer.
+# State: Whenever the state variable changes React re-render the component.
+# React is Fast : Its uses incremental rendering and performant efficient
+# Micro-Frontend-Architecture : Each module in Frontend project have specific port or url to talk and interconnected to other module or service in project is MFA.
+# React has better render mechanism to make it fast.
+# Cross-origin Policy : If there is a origin mis-match one origin to another then browser block the api call.
